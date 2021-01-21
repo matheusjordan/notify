@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FirebaseX } from '@ionic-native/firebase-x/ngx';
+import { PushNotificationService } from './shared/services/push-notification.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +22,8 @@ import { FirebaseX } from '@ionic-native/firebase-x/ngx';
       provide: RouteReuseStrategy,
       useClass: IonicRouteStrategy
     },
-    FirebaseX
+    FirebaseX,
+    PushNotificationService
   ],
   bootstrap: [AppComponent]
 })
